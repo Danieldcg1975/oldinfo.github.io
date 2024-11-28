@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas de Cuidados para Idosos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        
+        .navbar {
+            background-color: #007bff; 
+        }
+        .navbar a {
+            color: black; 
+        }
+        .navbar a:hover {
+            color: #ffcc00; 
+        }
+
+        
+        header {
+            background-color: #007bff; 
+            color: black; 
+            padding: 2rem; 
+            text-align: center; 
+        }
+
+        
+        @keyframes piscar {
+            0%, 100% {
+                opacity: 1; 
+            }
+            50% {
+                opacity: 0.5; 
+            }
+        }
+
+        
+        .dica {
+            padding: 1rem; 
+            margin-bottom: 1rem; 
+            color: black; 
+            border-radius: 5px; 
+        }
+
+        
+        .dica1 {
+            background-color: rgba(0, 123, 255, 0.2); 
+        }
+        .dica2 {
+            background-color: rgba(0, 123, 255, 0.5); 
+        }
+        .dica3 {
+            background-color: rgba(0, 123, 255, 0.8); 
+        }
+
+        
+        footer {
+            background-color: #f8f9fa; 
+            color: black; 
+        }
+
+        
+        .dica img {
+            width: 250px; 
+            height: auto; 
+            display: block; 
+            margin: 0 auto; 
+            border-radius: 8px; 
+            margin-top: 0.5rem; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Cuidados com Idosos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="beneficios.html">Benefícios</a></li>
+                <li class="nav-item"><a class="nav-link" href="dicas.html">Dicas de Cuidados</a></li>
+                <li class="nav-item"><a class="nav-link active" href="cuidados.html">Cuidados do Idoso</a></li>
+                <li class="nav-item"><a class="nav-link" href="galeria.html">Galeria Interativa</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="text-center">
+        <h1 style="animation: piscar 1s infinite;">Dicas de Cuidados para Idosos</h1>
+        <p>Orientações essenciais para oferecer um cuidado de qualidade aos idosos em instituições.</p>
+    </header>
+
+    <section class="container my-4">
+        <div class="dica dica1">
+            <h2>Dica 1: Incentivar a Atividade Física</h2>
+            <p>Promover atividades físicas leves, como caminhadas supervisionadas, pode ajudar a manter a mobilidade e prevenir a perda de massa muscular dos idosos.</p>
+            <img src="curso/idoso fazendo atividade física.jpg" alt="Idosos fazendo atividades físicas">
+        </div>
+
+        <div class="dica dica2">
+            <h2>Dica 2: Estimular a Socialização</h2>
+            <p>Atividades em grupo, como oficinas de arte ou leitura, podem reduzir o isolamento e melhorar o bem-estar emocional dos idosos.</p>
+            <img src="curso/atividades em grupo idosos.jpg" alt="Atividades em grupo com idosos">
+        </div>
+
+        <div class="dica dica3">
+            <h2>Dica 3: Manter uma Alimentação Equilibrada</h2>
+            <p>Oferecer refeições balanceadas e ajustadas às necessidades nutricionais dos idosos é essencial para sua saúde física e mental.</p>
+            <img src="curso/alimentação saudável.jpg" alt="Alimentação saudável para idosos">
+        </div>
+    </section>
+
+    <footer class="text-center p-3 bg-light">
+        <p>&copy; 2024 Cuidados com Idosos</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

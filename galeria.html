@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Interativa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .navbar {
+            background-color: #007bff;
+        }
+
+        .navbar a {
+            color: white;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .gallery-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        
+        .circle {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            margin: 15px;
+            border-radius: 50%;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.6s, background-color 0.3s ease-in-out;
+            text-align: center;
+            font-size: 20px;
+            perspective: 1000px;
+        }
+
+        .circle:hover {
+            transform: scale(1.1);
+        }
+
+        .circle-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            transition: transform 0.6s;
+        }
+
+        .circle .back {
+            transform: rotateY(180deg);
+        }
+
+        .circle.clicked .front {
+            transform: rotateY(180deg);
+        }
+
+        .circle.clicked .back {
+            transform: rotateY(0deg);
+        }
+
+        .circle .front {
+            transform: rotateY(0deg);
+        }
+
+        .circle .back {
+            transform: rotateY(180deg);
+        }
+
+        
+        .circle1 { background-color: #007bff; }
+        .circle2 { background-color: #ff6347; }
+        .circle3 { background-color: #32cd32; }
+        .circle4 { background-color: #ffa500; }
+        .circle5 { background-color: #800080; }
+        .circle6 { background-color: #f0e68c; }
+
+        .circle.clicked.circle1 { background-color: #004080; } 
+        .circle.clicked.circle2 { background-color: #c45e54; } 
+        .circle.clicked.circle3 { background-color: #228b22; } 
+        .circle.clicked.circle4 { background-color: #cc7a00; } 
+        .circle.clicked.circle5 { background-color: #6a006a; } 
+        .circle.clicked.circle6 { background-color: #d4b150; } 
+
+        .icon { font-size: 40px; }
+
+        .front, .back {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+
+        
+        .parallax {
+            background-image: url('https://www.w3schools.com/w3images/parallax1.jpg');
+            height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        
+        .accordion .card-header {
+            color: black;
+        }
+
+        .accordion .card-body {
+            color: black;
+        }
+
+        
+        .card.card-one .card-header {
+            background-color: #007bff;
+            color: black;
+        }
+
+        .card.card-two .card-header {
+            background-color: #ff6347;
+            color: black;
+        }
+
+        .card.card-three .card-header {
+            background-color: #32cd32;
+            color: black;
+        }
+
+        .card.card-four .card-header {
+            background-color: #ffa500;
+            color: black;
+        }
+
+        .card.card-five .card-header {
+            background-color: #800080;
+            color: black;
+        }
+
+        .card.card-six .card-header {
+            background-color: #f0e68c;
+            color: black;
+        }
+
+        
+        .card-body {
+            color: black; 
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Cuidados com Idosos</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="beneficios.html">Benefícios</a></li>
+                <li class="nav-item"><a class="nav-link" href="dicas.html">Dicas de Cuidados</a></li>
+                <li class="nav-item"><a class="nav-link active" href="cuidados.html">Cuidados do Idoso</a></li>
+                <li class="nav-item"><a class="nav-link" href="galeria.html">Galeria Interativa</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="parallax"></div>
+
+    <div class="gallery-container">
+        <h1>Galeria Interativa</h1>
+
+        
+        <div class="circle circle1" onclick="this.classList.toggle('clicked');">
+            <div class="circle-content front">
+                <i class="fas fa-heart icon"></i>
+            </div>
+            <div class="circle-content back">
+                <p>Cuidado Cardiovascular</p>
+            </div>
+        </div>
+        <div class="circle circle2" onclick="this.classList.toggle('clicked');">
+            <div class="circle-content front">
+                <i class="fas fa-bed icon"></i>
+            </div>
+            <div class="circle-content back">
+                <p>Cuidado com o Descanso</p>
+            </div>
+        </div>
+        <div class="circle circle3" onclick="this.classList.toggle('clicked');">
+            <div class="circle-content front">
+                <i class="fas fa-hands-helping icon"></i>
+            </div>
+            <div class="circle-content back">
+                <p>Apoio na Mobilidade</p>
+            </div>
+        </div>
+        <div class="circle circle4" onclick="this.classList.toggle('clicked');">
+            <div class="circle-content front">
+                <i class="fas fa-apple-alt icon"></i>
+            </div>
+            <div class="circle-content back">
+                <p>Alimentação Saudável</p>
+            </div>
+        </div>
+        <div class="circle circle5" onclick="this.classList.toggle('clicked');">
+            <div class="circle-content front">
+                <i class="fas fa-bone icon"></i>
+            </div>
+            <div class="circle-content back">
+                <p>Saúde Óssea</p>
+            </div>
+        </div>
+        <div class="circle circle6" onclick="this.classList.toggle('clicked');">
+            <div class="circle-content front">
+                <i class="fas fa-brain icon"></i>
+            </div>
+            <div class="circle-content back">
+                <p>Saúde Mental</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container mt-5">
+        <div id="accordion">
+            <div class="card card-one">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Cuidado Cardiovascular
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        A saúde cardiovascular é essencial para o envelhecimento saudável. Manter hábitos alimentares saudáveis, praticar exercícios físicos regularmente e realizar acompanhamento médico contínuo ajudam a manter o coração saudável.
+                    </div>
+                </div>
+            </div>
+            <div class="card card-two">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Descanso
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        O descanso adequado é fundamental para o bem-estar do idoso. É importante garantir um ambiente confortável e tranquilo para o sono, além de promover atividades relaxantes durante o dia.
+                    </div>
+                </div>
+            </div>
+            <div class="card card-three">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Apoio na Mobilidade
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        O auxílio na mobilidade é essencial para prevenir quedas e melhorar a autonomia dos idosos. O uso de andadores ou a ajuda para se levantar de uma cadeira pode ser fundamental para garantir a segurança.
+                    </div>
+                </div>
+            </div>
+            <div class="card card-four">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Alimentação Saudável
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        Uma alimentação equilibrada, rica em nutrientes e com baixo teor de gordura, é essencial para a saúde do idoso. O controle do consumo de sal e açúcar também é importante para evitar doenças crônicas.
+                    </div>
+                </div>
+            </div>
+            <div class="card card-five">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Saúde Óssea
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        O cuidado com a saúde óssea envolve atividades que fortaleçam os ossos, como exercícios físicos e a ingestão de cálcio e vitamina D. A prevenção de fraturas deve ser uma prioridade para o bem-estar do idoso.
+                    </div>
+                </div>
+            </div>
+            <div class="card card-six">
+                <div class="card-header" id="headingSix">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Saúde Mental
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div class="card-body">
+                        A saúde mental dos idosos deve ser tratada com a mesma atenção que a saúde física. Estimular atividades cognitivas, promover o convívio social e garantir acompanhamento psicológico são fundamentais para a prevenção de doenças mentais.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <p>&copy; 2024 Cuidados com Idosos. Todos os direitos reservados.</p>
+    </footer>
+
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
